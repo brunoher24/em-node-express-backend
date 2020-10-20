@@ -3,13 +3,13 @@ const router = express.Router();
 
 // on importe les fonctions créées dans un module cinema.js
 // contenu dans le dossier controllers
-const cinemaCtrl = require('../controllers/cinema');
+const tvShowCtrl = require('../controllers/tv-show');
 
 
 // exécution de telle ou telle fonction du controller requis, 
 // en fonction de la méthode de routage et du suffixe d'URL
-router.get('/read', cinemaCtrl.read);
-router.get('/read/:name', cinemaCtrl.readOne);
+router.get('/list', tvShowCtrl.read);
+router.get('/one/:name', tvShowCtrl.readOne);
 
 
 module.exports = router;

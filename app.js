@@ -4,7 +4,7 @@ const app = express();
 // on constitue un dossier 'routes' qui contiendra les modules de 
 // 'dispatch', chargés selon le suffixe du chemin de routage et la méthode de routage
 // (get, post, put, delete ...)
-const cinemaRoutes = require('./routes/cinema');
+const tvShowRoutes = require('./routes/tv-show');
 
 
 app.use((req, res, next) => {
@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 // au chemin de routage ex: http://localhost:3000/api/mon_chemin
 
 // app.use(...fichier correspondant à mon_chemin.js...)
-
+app.use('/api/series', tvShowRoutes);
 
 module.exports = app;
 
