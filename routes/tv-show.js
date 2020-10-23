@@ -8,7 +8,7 @@ const tvShowCtrl = require('../controllers/tv-show');
 
 // exécution de telle ou telle fonction du controller requis, 
 // en fonction de la méthode de routage et du suffixe d'URL
-router.get('/list', tvShowCtrl.read);
+router.get('/list/:pageNumber', tvShowCtrl.read);
 router.get('/one/:name', tvShowCtrl.readOne);
 
 
